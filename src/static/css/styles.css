@@ -1,0 +1,46 @@
+button {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color:#b6b3b3; 
+}
+
+section {
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none; 
+    color:rgb(238, 242, 250); 
+}
+
+#contact {
+    background-color: #031b43;
+}
+
+input, textarea {
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#shadow-host-companion {
+    display: none; 
+}

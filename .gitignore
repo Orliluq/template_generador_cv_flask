@@ -1,0 +1,9 @@
+
+.codegpt
+.venv
+.env.local
+.env.*.local
+__pycache__
+.vercel
+.python-version
+vercel.json
