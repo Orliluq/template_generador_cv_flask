@@ -96,7 +96,7 @@ Si deseas personalizar el contenido del CV:
 2. Modifica las secciones de habilidades, experiencia, proyectos, etc., según tus necesidades.
 3. Guarda los cambios y reinicia el servidor Flask.
 
-example_docx.jpg
+![example_docx](https://github.com/user-attachments/assets/69e56765-1f7b-4765-8f94-d80186912cf8)
 
 ## 📊 Optimización para ATS (Applicant Tracking System)
 
