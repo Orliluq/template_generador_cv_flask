@@ -5,7 +5,7 @@
   "main": "main.py",
   "type": "module",
   "scripts": {
-    "build": "postcss src/input.css -o static/css/styles.css",
+    "build": "tailwindcss -i input.css -o src/static/css/styles.css --minify",
     "start": "python main.py",
     "dev": "flask run --host=0.0.0.0 --port=3000"
   },
