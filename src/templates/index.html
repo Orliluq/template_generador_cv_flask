@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/static/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="/static/js/scripts.js?v=1.0.1" defer></script>
+
+     <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#031b43',
+                        'primary-dark': '#02122f',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>Mi Sitio</title>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="py-4 px-4 md:px-6 lg:px-8 bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="/" class="text-2xl font-bold text-primary"></a>
+                <a href="https://github.com/xxxx" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 inline hover:fill-[#b6b3b3] transition duration-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.009-.868-.014-1.704-2.782.603-3.369-1.343-3.369-1.343-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.607.069-.607 1.003.07 1.53 1.03 1.53 1.03.892 1.529 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.94 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.273.098-2.654 0 0 .84-.268 2.75 1.026A9.58 9.58 0 0 1 12 6.845c.852.004 1.71.115 2.513.338 1.91-1.294 2.75-1.026 2.75-1.026.545 1.381.202 2.401.1 2.654.64.699 1.029 1.592 1.029 2.683 0 3.841-2.339 4.683-4.566 4.932.36.31.682.921.682 1.856 0 1.34-.012 2.42-.012 2.748 0 .268.18.576.688.479A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/>
+                </svg>
+
+                </a>
+            </div>
+
+            <!-- Nav Links -->
+           <nav class="hidden md:flex space-x-4">
+            <!-- Web 1 -->
+            <a href="https://xxxx" target="_blank" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-gray-600 hover:text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1 no-underline text-inherit hover:fill-[#b6b3b3]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2Zm0 2.4c-1.3 0-2.35 1.05-2.35 2.35 0 1.3 1.05 2.35 2.35 2.35 1.3 0 2.35-1.05 2.35-2.35 0-1.3-1.05-2.35-2.35-2.35ZM12 15.9c-2.5 0-4.9-1.33-6.15-3.4.1-.8 6.05-.8 6.15-.8s6.05 0 6.15.8c-1.25 2.07-3.65 3.4-6.15 3.4Z"/>
+                </svg>
+                Web 1
+            </a>
+
+            <!-- Web 2 -->
+            <a href="https://xxxx" target="_blank" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-gray-600 hover:text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1 no-underline text-inherit hover:fill-[#b6b3b3]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2Zm0 2.4c-1.3 0-2.35 1.05-2.35 2.35 0 1.3 1.05 2.35 2.35 2.35 1.3 0 2.35-1.05 2.35-2.35 0-1.3-1.05-2.35-2.35-2.35ZM12 15.9c-2.5 0-4.9-1.33-6.15-3.4.1-.8 6.05-.8 6.15-.8s6.05 0 6.15.8c-1.25 2.07-3.65 3.4-6.15 3.4Z"/>
+                </svg>
+                Web 2
+            </a>
+
+             <!-- Web 3 -->
+            <a href="https://xxxx" target="_blank" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-gray-600 hover:text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1 no-underline text-inherit hover:fill-[#b6b3b3]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2Zm0 2.4c-1.3 0-2.35 1.05-2.35 2.35 0 1.3 1.05 2.35 2.35 2.35 1.3 0 2.35-1.05 2.35-2.35 0-1.3-1.05-2.35-2.35-2.35ZM12 15.9c-2.5 0-4.9-1.33-6.15-3.4.1-.8 6.05-.8 6.15-.8s6.05 0 6.15.8c-1.25 2.07-3.65 3.4-6.15 3.4Z"/>
+                </svg>
+                Web 3
+            </a>
+        </nav>
+        
+            <!-- Botón Portfolio -->
+            <button 
+                onclick="window.location.href='https://xxxxxxx/'"
+                class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition duration-300">
+                Portfolio
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="py-20 px-4 md:px-6 lg:px-8 text-center bg-white">
+            <div class="container mx-auto">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
+                    Bienvenido a Mi Sitio
+                </h1>
+                <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-600">
+                    Descubre mis habilidades, experiencia y más.
+                </p>
+                <button
+                    onclick="window.location.href='https://xxxxx'" 
+                    class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition duration-300">
+                    Explorar Más
+                </button>
+            </div>
+        </section>
+
+         <!-- Habilidades -->
+        <section id="features" class="py-20 px-4 md:px-6 lg:px-8 bg-gray-100">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-primary">Mis Habilidades</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <svg class="w-10 h-10 mb-4 text-primary mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        <h3 class="text-xl font-semibold text-center">Lorem ipsum</h3>
+                        <p class="text-center text-gray-600">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <svg class="w-10 h-10 mb-4 text-primary mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <h3 class="text-xl font-semibold text-center">Experiencia Laboral</h3>
+                        <p class="text-center text-gray-600">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <svg class="w-10 h-10 mb-4 text-primary mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
+                        <h3 class="text-xl font-semibold text-center">Educación</h3>
+                        <p class="text-center text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv" class="py-20 px-4 md:px-6 lg:px-8 bg-white">
+            <div class="container mx-auto">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h2 class="text-3xl font-bold text-center text-primary mb-4">Descarga mi CV</h2>
+                    <p class="text-xl text-center text-gray-600 mb-6">
+                        Obtén más información sobre mi experiencia y habilidades.
+                    </p>
+                    <div class="flex justify-center">
+                        <a href="{{ url_for('main.download_cv_file') }}" class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-[#b6b3b3] no-underline text-inherit transition duration-300">
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 px-4 md:px-6 lg:px-8 bg-primary text-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">¿Listo para trabajar juntos?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Contáctame para discutir cómo puedo ayudarte en tu próximo proyecto.
+                </p>
+                <form id="contactForm" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg" autocomplete="on">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required
+                            class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-primary"
+                            placeholder="Tu nombre">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo electrónico</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required
+                            class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-primary"
+                            placeholder="tu@email.com">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Mensaje</label>
+                        <textarea id="message" name="message" autocomplete="off" required
+                            class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-primary"
+                            rows="4" placeholder="Tu mensaje"></textarea>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button type="button" id="contactButton"
+                            class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition duration-300">
+                            Contactar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer opcional -->
+    <footer class="bg-black text-white py-6 px-4 md:px-6 lg:px-8">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                &copy; 2025 Desarrollado por Orlibet Dun. Todos los derechos reservados.
+            </div>
+             <div class="flex space-x-4">
+                <a href="{{ url_for('main.privacy_policy') }}" class="hover:text-gray-600 no-underline text-inherit transition duration-300">Política de Privacidad</a>
+                <a href="{{ url_for('main.terms_of_use') }}" class="hover:text-gray-600 no-underline text-inherit transition duration-300">Términos de Uso</a>
+            </div>
+
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"defer></script>
+</body>
+</html>

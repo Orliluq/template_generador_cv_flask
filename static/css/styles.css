@@ -1,0 +1,61 @@
+/* General button styles */
+button {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #b6b3b3;
+}
+
+/* Section padding */
+section {
+    padding: 20px;
+}
+
+/* Headings styling */
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Anchor links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: rgb(238, 242, 250);
+}
+
+/* Contact section background */
+#contact {
+    background-color: #031b43;
+    color: white;
+}
+
+/* Form inputs */
+input,
+textarea {
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* Elemento específico oculto (¿extensión?) */
+#shadow-host-companion {
+    display: none !important;
+}
