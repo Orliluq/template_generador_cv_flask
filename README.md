@@ -136,6 +136,13 @@ Este CV ha sido diseñado para pasar los filtros ATS, lo que mejora significativ
 
 Con estas características, este CV tiene un alto nivel de compatibilidad con las herramientas automatizadas de reclutamiento y aumenta las probabilidades de superar la primera fase de selección.
 
+## Próximos Pasos: [VER](Métricas_del_proyecto.md)
+- **Optimización de JavaScript y CSS:** Reducir el código no utilizado y las dependencias de terceros podría mejorar significativamente la puntuación de rendimiento.
+
+- **Mejorar la accesibilidad:** Abordar los problemas de enlaces sin nombre y hacer los controles más accesibles para los usuarios con discapacidades.
+
+- **Ajustes en SEO:** Agregar una meta descripción y validar con herramientas externas para mejorar el SEO general.
+
 # 🤝 Contribución
 ¡Aceptamos contribuciones! 💡 Por favor, abre un *pull request* o reporta un error 🐛.
 Si deseas contribuir al proyecto:
