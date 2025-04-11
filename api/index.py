@@ -1,4 +1,6 @@
 from main import app as flask_app
+from werkzeug.wrappers import Response
 
 def handler(request):
-    return flask_app(request.environ, start_response=lambda *args: None)
+    response = Response.from_app(flask_app, request.environ)
+    return response
