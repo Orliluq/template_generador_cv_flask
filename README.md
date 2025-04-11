@@ -141,7 +141,7 @@ Con estas características, este CV tiene un alto nivel de compatibilidad con la
 
 - **Mejorar la accesibilidad:** Abordar los problemas de enlaces sin nombre y hacer los controles más accesibles para los usuarios con discapacidades.
 
-- **Ajustes en SEO:** Agregar una meta descripción y validar con herramientas externas para mejorar el SEO general.
+- **Ajustes en SEO:** Validar con herramientas externas para mejorar el SEO general.
 
 # 🤝 Contribución
 ¡Aceptamos contribuciones! 💡 Por favor, abre un *pull request* o reporta un error 🐛.
