@@ -105,6 +105,8 @@ Si deseas personalizar el contenido del CV:
 2. Modifica las secciones de habilidades, experiencia, proyectos, etc., según tus necesidades.
 3. Guarda los cambios y reinicia el servidor Flask.
 
+[Ejemplo](CV.pdf)
+
 ## 📊 Optimización para ATS (Applicant Tracking System)
 
 Este CV ha sido diseñado para pasar los filtros ATS, lo que mejora significativamente las posibilidades de ser considerado en el proceso de selección. A continuación se detallan las razones por las cuales este CV está optimizado para sistemas ATS:
