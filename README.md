@@ -78,10 +78,10 @@ http://127.0.0.1:5000/
 │   │   ├── css                   # Estilos globales.
 │   │   ├── js                    # Lógica JavaScript.
 │   │   ├── favicon.png           # Favicon Python.
+│   ├── templates/                # Archivos HTML para las vistas.
+│   ├── input.css                 # Archivo de estilo CSS personalizado.
 ├── tests/
 │   ├── test_routes.py            # Contiene las pruebas de las rutas de la aplicación.
-│   ├── templates/                # Archivos HTML para las vistas.
-├── input.css                     # Archivo de estilo CSS personalizado.
 ├── requirements.txt              # Dependencias del proyecto.
 ├── devserver.sh                  # Script para configurar o ejecutar el servidor de desarrollo.
 ├── tailwind.config.txt           # Configuración de Tailwind CSS.
