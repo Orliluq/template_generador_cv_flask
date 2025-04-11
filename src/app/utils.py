@@ -4,6 +4,28 @@ from docx import Document
 from docx.shared import Pt, RGBColor
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx2pdf import convert
+import time
+
+
+def clean_old_tmp_files(folder_path, max_age_seconds=3600):
+    """
+    Elimina archivos en folder_path que tengan más de `max_age_seconds` segundos.
+    Por defecto, elimina archivos con más de 1 hora (3600 segundos).
+    """
+    now = time.time()
+    if not os.path.exists(folder_path):
+        return
+
+    for filename in os.listdir(folder_path):
+        file_path = os.path.join(folder_path, filename)
+        if os.path.isfile(file_path):
+            file_age = now - os.path.getmtime(file_path)
+            if file_age > max_age_seconds:
+                try:
+                    os.remove(file_path)
+                    print(f"Archivo eliminado: {file_path}")
+                except Exception as e:
+                    print(f"No se pudo eliminar {file_path}: {e}")
 
 def generate_cv():
     doc = Document()
@@ -45,7 +67,7 @@ def generate_cv():
         paragraph.paragraph_format.space_after = Pt(6)
         paragraph.paragraph_format.line_spacing = Pt(12)  
         return paragraph
-    
+
     def add_bulleted_list(doc, items, font_size=10, color=RGBColor(0, 0, 0)):
         for item in items:
             paragraph = doc.add_paragraph(style='List Bullet') 
@@ -53,7 +75,7 @@ def generate_cv():
             run.font.size = Pt(font_size)
             run.font.color.rgb = color
             run.font.name = 'Avenir'
-        
+
             paragraph.paragraph_format.space_before = Pt(0)  
             paragraph.paragraph_format.space_after = Pt(6)  
             paragraph.paragraph_format.line_spacing = Pt(12)  
@@ -172,7 +194,7 @@ def generate_cv():
         run.font.size = Pt(10)
         run.font.color.rgb = RGBColor(0, 0, 0)
         run.font.name = 'Avenir'
-    
+
         paragraph.paragraph_format.space_before = Pt(0)  
         paragraph.paragraph_format.space_after = Pt(6)  
         paragraph.paragraph_format.line_spacing = Pt(12)  
@@ -199,5 +221,6 @@ def generate_cv():
     # convert(docx_path, pdf_path)
 
     return docx_path, pdf_path  
+
 
 generate_cv()
