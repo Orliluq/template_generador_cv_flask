@@ -191,7 +191,7 @@ def generate_cv():
 
     output_dir = os.path.join(os.getcwd(), 'src', 'static')
     os.makedirs(output_dir, exist_ok=True)  
-    docx_path = os.path.join('/tmp', 'CV.docx')
+    docx_path = os.path.join(output_dir, 'CV.docx')
     pdf_path = os.path.join(output_dir, 'CV.pdf')
 
     doc.save(docx_path)

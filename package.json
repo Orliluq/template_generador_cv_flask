@@ -5,7 +5,7 @@
   "main": "main.py",
   "type": "module",
   "scripts": {
-    "build": "tailwindcss -i input.css -o src/static/css/styles.css --minify",
+    "build": "tailwindcss -i src/static/input.css -o src/static/css/styles.css --minify",
     "start": "python main.py",
     "dev": "flask run --host=0.0.0.0 --port=3000"
   },
@@ -20,13 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Orliluq/generador_cv_flask.git"
+    "url": "git+https://github.com/Orliluq/generador_cv_flask.git"
   },
   "keywords": [],
   "author": "Orli Dun",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Orliluq/generador_cv_flask/issues"
-  },
-  "homepage": "https://github.com/Orliluq/generador_cv_flask#readme"
+  }
 }
