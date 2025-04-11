@@ -78,8 +78,8 @@ http://127.0.0.1:5000/
 │   │   ├── css                   # Estilos globales.
 │   │   ├── js                    # Lógica JavaScript.
 │   │   ├── favicon.png           # Favicon Python.
+│   │   ├── input.css             # Archivo de estilo CSS personalizado.
 │   ├── templates/                # Archivos HTML para las vistas.
-│   ├── input.css                 # Archivo de estilo CSS personalizado.
 ├── tests/
 │   ├── test_routes.py            # Contiene las pruebas de las rutas de la aplicación.
 ├── requirements.txt              # Dependencias del proyecto.
@@ -139,7 +139,7 @@ Con estas características, este CV tiene un alto nivel de compatibilidad con la
 ## Próximos Pasos: [VER](Métricas_del_proyecto.md)
 - **Optimización de JavaScript y CSS:** Reducir el código no utilizado y las dependencias de terceros podría mejorar significativamente la puntuación de rendimiento.
 
-- **Mejorar la accesibilidad:** Abordar los problemas de enlaces sin nombre y hacer los controles más accesibles para los usuarios con discapacidades.
+- **Mejorar la accesibilidad:** Hacer los controles más accesibles para los usuarios con discapacidades.
 
 - **Ajustes en SEO:** Validar con herramientas externas para mejorar el SEO general.
 
