@@ -110,6 +110,21 @@ Si deseas personalizar el contenido del CV:
 
 [Ejemplo](CV.pdf)
 
+## 🧪 Pruebas del Proyecto
+
+Este directorio contiene los tests automatizados del generador de CV.
+
+### Estructura
+
+- `test_routes.py`: Verifica el comportamiento de las rutas Flask.
+- `test_utils.py`: Prueba funciones utilitarias como generación de PDFs y DOCXs.
+
+### Ejecutar las pruebas
+
+```
+pytest
+```
+
 ## 📊 Optimización para ATS (Applicant Tracking System)
 
 Este CV ha sido diseñado para pasar los filtros ATS, lo que mejora significativamente las posibilidades de ser considerado en el proceso de selección. A continuación se detallan las razones por las cuales este CV está optimizado para sistemas ATS:
