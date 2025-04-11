@@ -67,16 +67,19 @@ http://127.0.0.1:5000/
 
 ## 🗂️ Estructura del Proyecto
 ```
+├── api/
+│   ├── index.py                  # Inicialización.
 ├── src/
-│   ├── api/
-│   │   ├── index.py              # Inicialización.
 │   ├── app/
 │   │   ├── __init__.py           # Inicialización de la app Flask.
 │   │   ├── routes.py             # Rutas principales del proyecto.
 │   │   ├── utils.py              # Lógica para la generación de CV.
-│   ├── tests/
-│   │   ├── test_routes.py        # Contiene las pruebas de las rutas de la aplicación..
 │   ├── static/                   # Archivos generados (DOCX, PDF).
+│   │   ├── css                   # Estilos globales.
+│   │   ├── js                    # Lógica JavaScript.
+│   │   ├── favicon.png           # Favicon Python.
+├── tests/
+│   ├── test_routes.py            # Contiene las pruebas de las rutas de la aplicación.
 │   ├── templates/                # Archivos HTML para las vistas.
 ├── input.css                     # Archivo de estilo CSS personalizado.
 ├── requirements.txt              # Dependencias del proyecto.
