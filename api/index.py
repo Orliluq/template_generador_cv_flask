@@ -1,6 +1,22 @@
-from main import app as flask_app
-from werkzeug.wrappers import Response
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-def handler(request):
-    response = Response.from_app(flask_app, request.environ)
+from app import create_app
+from flask import Flask, request
+import time
+
+app = create_app()
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=5000)
+
+@app.before_request
+def start_timer():
+    request.start_time = time.time()
+
+@app.after_request
+def log_response(response):
+    duration = time.time() - request.start_time
+    print(f"{request.method} {request.path} → {response.status_code} in {duration:.4f}s")
     return response
