@@ -79,6 +79,7 @@ http://127.0.0.1:5000/
 │   │   ├── js                    # Lógica JavaScript.
 │   │   ├── favicon.png           # Favicon Python.
 │   │   ├── input.css             # Archivo de estilo CSS personalizado.
+│   ├── app.py                    # Archivo app python.
 │   ├── templates/                # Archivos HTML para las vistas.
 ├── tests/
 │   ├── test_routes.py            # Contiene las pruebas de las rutas de la aplicación.
