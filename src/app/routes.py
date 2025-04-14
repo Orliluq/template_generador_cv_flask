@@ -58,5 +58,5 @@ def terms_of_use():
 
 
 @main.app_errorhandler(404)
-def pagina_nofound(error):
+def page_not_found(e):
     return render_template("404.html"), 404
