@@ -125,6 +125,8 @@ Este directorio contiene los tests automatizados del generador de CV.
 - `test_routes.py`: Verifica el comportamiento de las rutas Flask.
 - `test_utils.py`: Prueba funciones utilitarias como generación de PDFs y DOCXs.
 
+![alt text](test.jpg)
+
 ### Ejecutar las pruebas
 
 ```
