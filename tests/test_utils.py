@@ -3,15 +3,12 @@ import os
 from src.app.utils import generate_cv
 from docx import Document
 
-
 class TestUtils(unittest.TestCase):
 
     def setUp(self):
-        # Establecer las rutas para los archivos generados
         self.docx_path, self.pdf_path = generate_cv()
 
     def test_generate_cv_creates_docx_file(self):
-        """Verificar que el archivo .docx se crea correctamente"""
         self.assertTrue(os.path.exists(self.docx_path))
         self.assertTrue(self.docx_path.endswith(".docx"))
 
@@ -22,12 +19,8 @@ class TestUtils(unittest.TestCase):
         pass  # Esto depende de si la conversión a PDF está habilitada o no
 
     def test_generate_cv_check_sections_in_docx(self):
-        """Verificar que las secciones están presentes en el archivo .docx"""
-        # Cargar el archivo .docx generado
         doc = Document(self.docx_path)
 
-        # Comprobar que los títulos de las secciones están presentes
-        section_titles = [
             "Perfil",
             "Habilidades",
             "Experiencia Profesional",
@@ -49,8 +42,6 @@ class TestUtils(unittest.TestCase):
         """Verificar que los párrafos esperados están presentes en el archivo .docx"""
         # Cargar el archivo .docx generado
         doc = Document(self.docx_path)
-
-        # Comprobar que ciertos textos están presentes en el documento
         expected_texts = [
             "Jhon Doe",  # Verificar nombre
             "Cargo Profesional Actual",  # Verificar cargo
@@ -67,7 +58,6 @@ class TestUtils(unittest.TestCase):
             self.assertTrue(found, f"Texto '{text}' no encontrado en el documento")
 
     def tearDown(self):
-        """Limpiar los archivos generados después de las pruebas"""
         if os.path.exists(self.docx_path):
             os.remove(self.docx_path)
         if os.path.exists(self.pdf_path):

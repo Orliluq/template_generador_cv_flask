@@ -14,31 +14,24 @@ def home():
 
 @main.route("/download_cv", endpoint="download_cv_file")
 def download_cv():
-    # Definir carpeta temporal y asegurar su existencia
     tmp_folder = os.path.join(current_app.root_path, "tmp")
     os.makedirs(tmp_folder, exist_ok=True)
-
-    # Limpiar archivos antiguos (más de 1 hora)
     clean_old_tmp_files(tmp_folder, max_age_seconds=3600)
 
-    # Generar el CV
     docx_path, _ = generate_cv()
     docx_path = os.path.abspath(docx_path)
 
     if not os.path.exists(docx_path):
         return f"El archivo no se encuentra en la ubicación esperada: {docx_path}", 404
 
-    # Crear un nombre único para el archivo temporal
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     unique_tmp_path = os.path.join(tmp_folder, f"cv_{timestamp}.docx")
 
-    # Mover el archivo generado a la carpeta temporal
     try:
         shutil.move(docx_path, unique_tmp_path)
     except Exception as e:
         return f"Error al mover el archivo: {e}", 500
 
-    # Enviar el archivo al cliente
     return send_file(
         unique_tmp_path,
         as_attachment=True,

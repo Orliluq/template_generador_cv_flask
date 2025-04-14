@@ -3,13 +3,9 @@ import os
 import time
 from flask import request
 
-# Agregar el directorio src al path para poder importar create_app
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
 
-# Importar la función create_app desde src/app.py
 from src.app import create_app
-
-# Crear la instancia de la aplicación Flask
 app = create_app()
 
 

@@ -2,10 +2,9 @@ import unittest
 import sys
 import os
 
-# Agregamos el directorio raíz al path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from src.app import create_app  # Importás la factory function
+from src.app import create_app
 
 
 class BasicTestCase(unittest.TestCase):
