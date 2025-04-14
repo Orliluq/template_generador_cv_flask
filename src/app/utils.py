@@ -88,8 +88,8 @@ def generate_cv():
     set_heading("Jhon Doe", size=16, bold=True)
     set_heading("Cargo Profesional Actual", size=14, bold=True)
     add_paragraph(
-        "Ciudad, País | Email: jhondoe@example.com | GitHub: https://github.com/xxxx | LinkedIn: https://www.linkedin.com/in/xxxx | Portfolio: https://xxxxxxxxxx|",
-        alignment=WD_PARAGRAPH_ALIGNMENT.CENTER
+        "Ciudad, País | Email: jhondoe@example.com | GitHub: https://github.com/ | LinkedIn: https://www.linkedin.com/in/ | Portfolio: https://github.com/|",
+        alignment=WD_PARAGRAPH_ALIGNMENT.CENTER,
     )
 
     # Profile Section
@@ -146,12 +146,15 @@ def generate_cv():
         bold=True,
         alignment=WD_PARAGRAPH_ALIGNMENT.LEFT
     )
-    add_bulleted_list(doc, [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore maougna aliqua.",
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur siuint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Enlace al Repositorio: https://xxxxxx",
-        "Link: https://xxxxx/"
-    ])
+    add_bulleted_list(
+        doc,
+        [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore maougna aliqua.",
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur siuint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "Enlace al Repositorio: https://github.com",
+            "Link: https://github.com",
+        ],
+    )
 
     # Proyecto 2
     add_paragraph(
@@ -159,12 +162,15 @@ def generate_cv():
         bold=True,
         alignment=WD_PARAGRAPH_ALIGNMENT.LEFT
     )
-    add_bulleted_list(doc, [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Enlace al Repositorio: https://xxxxxx",
-        "Link: https://xxxxx/"
-    ])
+    add_bulleted_list(
+        doc,
+        [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "Enlace al Repositorio: https://github.com",
+            "Link: https://github.com",
+        ],
+    )
 
     # Proyecto 3
     add_paragraph(
@@ -172,12 +178,15 @@ def generate_cv():
         bold=True,
         alignment=WD_PARAGRAPH_ALIGNMENT.LEFT
     )
-    add_bulleted_list(doc, [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Enlace al Repositorio: https://xxxxxxxxx",
-        "Link: https://xxxxxxxx/"
-    ])
+    add_bulleted_list(
+        doc,
+        [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "Enlace al Repositorio: https://github.com",
+            "Link: https://github.com",
+        ],
+    )
 
     # Education Section
     add_section_title("\nEducación")
@@ -211,7 +220,7 @@ def generate_cv():
     add_section_title("\nIdiomas")
     add_paragraph("Excepteur: Lorem ipsum (x1).")
 
-    output_dir = os.path.join(os.getcwd(), 'src', 'static')
+    output_dir = os.path.join(os.getcwd(), 'src', 'tmp')
     os.makedirs(output_dir, exist_ok=True)  
     docx_path = os.path.join(output_dir, 'CV.docx')
     pdf_path = os.path.join(output_dir, 'CV.pdf')

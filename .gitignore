@@ -4,9 +4,7 @@
 .env.local
 .env.*.local
 __pycache__
-.vercel
 .python-version
-vercel.json
 node_modules/
 package-lock.json
 yarn-error.log

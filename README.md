@@ -67,33 +67,38 @@ http://127.0.0.1:5000/
 
 ## 🗂️ Estructura del Proyecto
 ```
-├── api/
-│   ├── index.py                  # Inicialización.
+├── static/                       # Archivos estáticos públicos accesibles desde el navegador
+│   ├── css/                      # Estilos globales adicionales (no procesados por Tailwind)
+│   ├── js/                       # Scripts de JavaScript personalizados
+│   ├── favicon.png              # Ícono de la página (favicon)
+│   └── dist/
+│       └── output.css           # Archivo CSS compilado por Tailwind (minificado para producción)
+
 ├── src/
 │   ├── app/
-│   │   ├── __init__.py           # Inicialización de la app Flask.
-│   │   ├── routes.py             # Rutas principales del proyecto.
-│   │   ├── utils.py              # Lógica para la generación de CV.
-│   ├── static/                   # Archivos generados (DOCX, PDF).
-│   │   ├── css                   # Estilos globales.
-│   │   ├── js                    # Lógica JavaScript.
-│   │   ├── favicon.png           # Favicon Python.
-│   │   ├── input.css             # Archivo de estilo CSS personalizado.
-│   ├── app.py                    # Archivo app python.
-│   ├── templates/                # Archivos HTML para las vistas.
+│   │   ├── __init__.py          # Punto de inicio para inicializar la app Flask (create_app)
+│   │   ├── routes.py            # Define las rutas y vistas principales de la aplicación
+│   │   ├── utils.py             # Funciones auxiliares, como generación de archivos DOCX/PDF
+│   ├── input.css                # Entrada personalizada para compilar Tailwind CSS
+│   └── templates/               # Plantillas HTML renderizadas por Flask (Jinja2)
+
 ├── tests/
-│   ├── test_routes.py            # Contiene las pruebas de las rutas de la aplicación.
-├── requirements.txt              # Dependencias del proyecto.
-├── devserver.sh                  # Script para configurar o ejecutar el servidor de desarrollo.
-├── tailwind.config.txt           # Configuración de Tailwind CSS.
-├── postcss.config.js             # Archivo de configuración de PostCSS.
-├── LICENSE                       # Contiene la licencia bajo la cual se distribuye el proyecto.
-├── README.md                     # Documentación del proyecto.
+│   ├── test_routes.py           # Pruebas unitarias para las rutas HTTP de la aplicación
+│   └── test_utils.py            # Pruebas para funciones auxiliares (como generación de CV)
+
+├── requirements.txt             # Lista de dependencias del proyecto para instalación con pip
+├── devserver.sh                 # Script de ayuda para levantar el servidor en desarrollo (opcional)
+├── tailwind.config.js           # Configuración de Tailwind CSS (paths, colores, etc.)
+├── postcss.config.js            # Configuración de PostCSS (usado junto con Tailwind)
+├── LICENSE                      # Licencia de uso del proyecto
+├── README.md                    # Documentación principal del proyecto
+├── main.py                      # Archivo principal que inicia la app Flask (usado por Gunicorn)
+├── Procfile                     # Comando de inicio usado por plataformas como Render
 ```
 
 ## 🔄 Rutas Principales
 - `/`: Página principal que muestra la interfaz.
-- `/download_cv`: Genera y descarga el archivo DOCX del CV.
+- `/tmp`: Genera y descarga el archivo DOCX del CV.
 - `/politica-de-privacidad`: Página con la política de privacidad.
 - `/terminos-de-uso`: Página con los términos de uso.
 

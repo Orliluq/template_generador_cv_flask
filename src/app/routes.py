@@ -55,3 +55,8 @@ def privacy_policy():
 @main.route("/terminos-de-uso")
 def terms_of_use():
     return render_template("terms_of_use.html")
+
+
+@main.app_errorhandler(404)
+def pagina_nofound(error):
+    return render_template("404.html"), 404

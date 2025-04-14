@@ -55,7 +55,7 @@ class TestUtils(unittest.TestCase):
             "Jhon Doe",  # Verificar nombre
             "Cargo Profesional Actual",  # Verificar cargo
             "Lorem ipsum dolor sit amet",  # Ejemplo de párrafo
-            "Enlace al Repositorio: https://xxxxxx",  # Verificar enlaces
+            "Enlace al Repositorio: https://github.com",  # Verificar enlaces
         ]
 
         for text in expected_texts:

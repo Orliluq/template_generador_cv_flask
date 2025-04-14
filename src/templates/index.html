@@ -1,36 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="/static/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Genera tu CV profesional en formatos DOCX y PDF con esta aplicación web en Flask. Personalizable, minimalista y optimizada para ATS. ">
-    
-    <!-- Estilos -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Genera tu CV profesional en formatos DOCX y PDF con esta aplicación web en Flask. Personalizable, minimalista y optimizada para ATS.">
 
-    <!-- <link href="{{ url_for('static', filename='output.css') }}" rel="stylesheet"> -->
+  <!-- ✅ Estilos -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='dist/output.css') }}">
 
-    <script src="/static/js/scripts.js?v=1.0.1" defer></script>
-
-     <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#031b43',
-                        'primary-dark': '#02122f',
-                    }
-                }
-            }
-        }
-    </script>
+  <!-- ✅ JS -->
+  <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
 
     <title>Mi Sitio</title>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800 text-base">
     <!-- Header -->
     <header class="py-4 px-4 md:px-6 lg:px-8 bg-white shadow-md">
         <div class="container mx-auto flex justify-between items-center">
@@ -47,7 +31,7 @@
             <!-- Nav Links -->
            <nav class="hidden md:flex space-x-4">
             <!-- Web 1 -->
-            <a href="https://xxxx" alt="Logo de la empresa" target="_blank" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-gray-600 hover:text-primary">
+            <a href="404.html" alt="Logo de la empresa" target="_self" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-gray-600 hover:text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1 no-underline text-inherit hover:fill-[#b6b3b3]" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2Zm0 2.4c-1.3 0-2.35 1.05-2.35 2.35 0 1.3 1.05 2.35 2.35 2.35 1.3 0 2.35-1.05 2.35-2.35 0-1.3-1.05-2.35-2.35-2.35ZM12 15.9c-2.5 0-4.9-1.33-6.15-3.4.1-.8 6.05-.8 6.15-.8s6.05 0 6.15.8c-1.25 2.07-3.65 3.4-6.15 3.4Z"/>
                 </svg>
@@ -55,7 +39,7 @@
             </a>
 
             <!-- Web 2 -->
-            <a href="https://xxxx" alt="Logo de la empresa" target="_blank" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-gray-600 hover:text-primary">
+            <a href="404.html" alt="Logo de la empresa" target="_self" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-gray-600 hover:text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1 no-underline text-inherit hover:fill-[#b6b3b3]" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2Zm0 2.4c-1.3 0-2.35 1.05-2.35 2.35 0 1.3 1.05 2.35 2.35 2.35 1.3 0 2.35-1.05 2.35-2.35 0-1.3-1.05-2.35-2.35-2.35ZM12 15.9c-2.5 0-4.9-1.33-6.15-3.4.1-.8 6.05-.8 6.15-.8s6.05 0 6.15.8c-1.25 2.07-3.65 3.4-6.15 3.4Z"/>
                 </svg>
@@ -63,7 +47,7 @@
             </a>
 
              <!-- Web 3 -->
-            <a href="https://xxxx" alt="Logo de la empresa" target="_blank" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-gray-600 hover:text-primary">
+            <a href="404.html" alt="Logo de la empresa" target="_self" rel="noopener noreferrer" class="flex items-center text-sm font-medium text-gray-600 hover:text-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-1 no-underline text-inherit hover:fill-[#b6b3b3]" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2Zm0 2.4c-1.3 0-2.35 1.05-2.35 2.35 0 1.3 1.05 2.35 2.35 2.35 1.3 0 2.35-1.05 2.35-2.35 0-1.3-1.05-2.35-2.35-2.35ZM12 15.9c-2.5 0-4.9-1.33-6.15-3.4.1-.8 6.05-.8 6.15-.8s6.05 0 6.15.8c-1.25 2.07-3.65 3.4-6.15 3.4Z"/>
                 </svg>
@@ -73,7 +57,8 @@
         
             <!-- Botón Portfolio -->
             <button 
-                onclick="window.location.href='https://xxxxxxx/'" alt="portfolio" target="_blank" rel="noopener noreferrer"
+                onclick="window.location.href='404.html'" 
+                aria-label="Ir al portfolio"  target="_self" rel="noopener noreferrer"
                 class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition duration-300">
                 Portfolio
             </button>
@@ -83,7 +68,7 @@
     <!-- Hero Section -->
     <main>
         <section class="py-20 px-4 md:px-6 lg:px-8 text-center bg-white">
-            <div class="container mx-auto">
+             <div class="container mx-auto max-w-screen-lg px-4">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
                     Bienvenido a Mi Sitio
                 </h1>
@@ -91,7 +76,7 @@
                     Descubre mis habilidades, experiencia y más.
                 </p>
                 <button
-                    onclick="window.location.href='https://xxxxx'" 
+                    onclick="window.location.href='404.html'" 
                     class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition duration-300">
                     Explorar Más
                 </button>
@@ -100,7 +85,7 @@
 
          <!-- Habilidades -->
         <section id="features" class="py-20 px-4 md:px-6 lg:px-8 bg-gray-100">
-            <div class="container mx-auto">
+           <div class="container mx-auto max-w-screen-lg px-4">
                 <h2 class="text-3xl font-bold text-center mb-12 text-primary">Mis Habilidades</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -123,7 +108,7 @@
         </section>
 
         <section id="cv" class="py-20 px-4 md:px-6 lg:px-8 bg-white">
-            <div class="container mx-auto">
+             <div class="container mx-auto max-w-screen-lg px-4">
                 <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
                     <h2 class="text-3xl font-bold text-center text-primary mb-4">Descarga mi CV</h2>
                     <p class="text-xl text-center text-gray-600 mb-6">
@@ -139,7 +124,7 @@
         </section>
 
         <section id="contact" class="py-20 px-4 md:px-6 lg:px-8 bg-primary text-white">
-            <div class="container mx-auto text-center">
+            <div class="container mx-auto text-center max-w-screen-md px-4">
                 <h2 class="text-3xl font-bold mb-6">¿Listo para trabajar juntos?</h2>
                 <p class="text-xl mb-8 max-w-2xl mx-auto">
                     Contáctame para discutir cómo puedo ayudarte en tu próximo proyecto.
@@ -168,24 +153,26 @@
                             class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition duration-300">
                             Contactar
                         </button>
+                        <!-- Mensaje de error -->
+                       <!--  <div id="error-message"></div> -->
                     </div>
                 </form>
             </div>
         </section>
     </main>
 
-    <!-- Footer opcional -->
-    <footer class="bg-black text-white py-6 px-4 md:px-6 lg:px-8">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="text-center md:text-left mb-4 md:mb-0">
-                &copy; 2025 Desarrollado por Orlibet Dun. Todos los derechos reservados.
-            </div>
-             <div class="flex space-x-4">
-                <a href="{{ url_for('main.privacy_policy') }}" class="hover:text-gray-600 no-underline text-inherit transition duration-300">Política de Privacidad</a>
-                <a href="{{ url_for('main.terms_of_use') }}" class="hover:text-gray-600 no-underline text-inherit transition duration-300">Términos de Uso</a>
-            </div>
-        </div>
-    </footer>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"defer></script>
+    <!-- Footer -->
+  <footer class="bg-black text-white py-6 px-4 md:px-6 lg:px-8">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+      <div class="text-center md:text-left mb-4 md:mb-0">
+        &copy; 2025 Desarrollado por Orlibet Dun. Todos los derechos reservados.
+      </div>
+      <div class="flex space-x-4">
+        <a href="{{ url_for('main.privacy_policy') }}" class="hover:text-gray-400">Política de Privacidad</a>
+        <a href="{{ url_for('main.terms_of_use') }}" class="hover:text-gray-400">Términos de Uso</a>
+        <a href="{{ url_for('main.404') }}" class="hover:text-gray-400">404</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
