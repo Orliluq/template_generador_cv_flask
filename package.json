@@ -2,7 +2,6 @@
   "name": "template_generador_cv_flask",
   "version": "1.0.0",
   "description": "Este proyecto es una aplicación web construida con Flask que permite generar un CV dinámico en formatos DOCX y PDF. El CV incluye información personal, experiencia profesional, habilidades, proyectos, y más. Los usuarios pueden descargar el archivo generado directamente desde la interfaz web.",
-  "main": "src/main.py",
   "scripts": {
     "build": "tailwindcss -i src/input.css -o static/css/styles.css --minify",
     "start": "python main.py",
