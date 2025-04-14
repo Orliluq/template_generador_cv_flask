@@ -1,5 +1,6 @@
 
 .codegpt
+venv
 .venv
 .env.local
 .env.*.local
