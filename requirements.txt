@@ -16,5 +16,5 @@ ipython==8.18.1
 pip_audit==2.9.0
 pytest==8.3.4
 python-dotenv==1.0.1
-pywin32==310
+pywin32
 requests==2.32.3
