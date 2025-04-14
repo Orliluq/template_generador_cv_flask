@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tailwindcss -i src/input.css -o static/css/styles.css --minify",
     "start": "python main.py",
-    "dev": "FLASK_APP=src/app flask run --host=0.0.0.0 --port=3000",
+    "dev": "export FLASK_APP=src.app && export FLASK_ENV=development && flask run --host=0.0.0.0 --port=3000",
     "dev:css": "tailwindcss -i src/input.css -o static/css/styles.css --watch"
   },
   "devDependencies": {
