@@ -41,7 +41,7 @@ nltk==3.9.1
 packageurl-python==0.16.0
 packaging==24.2
 parso==0.8.4
-pillow==11.2.1
+pillow==11.3.0
 pip-api==0.0.34
 pip-requirements-parser==32.0.1
 pip_audit==2.9.0
